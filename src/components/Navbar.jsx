@@ -15,7 +15,6 @@ const Navbar = () => {
         }
     }
 
-
     useEffect(() => {
         window.addEventListener('scroll', onNavScroll);
         return () => {
@@ -38,11 +37,11 @@ const Navbar = () => {
             <li className='side-item tooltip' key={props.head}>
                 {/* <span className='tooltiptext'>{props.head}</span> */}
                 {props.head}
-                
+
             </li>
         )
     }
-    
+
     const litem = navdata[0].map((data) => {
         return sided(data)
     })
@@ -55,7 +54,7 @@ const Navbar = () => {
             <header className={!navState ? 'header1' : 'header2'}>
                 <nav className='nav'>
                     <div className='menubar'>
-                        <Bars3CenterLeftIcon className='menuicon' onClick={()=>{setClicked(!clicked)}}/>
+                        <Bars3CenterLeftIcon className='menuicon' onClick={() => { setClicked(!clicked) }} />
                     </div>
                     <div className='mnav'>
                         <div className='mhead'>
@@ -66,7 +65,7 @@ const Navbar = () => {
                                 English Edition
                             </div>
                             <div className='Dhsub'>
-                            &nbsp;{Time} &nbsp;
+                                &nbsp;{Time} &nbsp;
                             </div>
 
                             <div className='Thsub'>
@@ -79,15 +78,15 @@ const Navbar = () => {
                     </div>
                 </nav>
             </header>
-            <div className={clicked?`side-main-box`:'side-main-box hide-side'}>
+            <div className={clicked ? `side-main-box` : 'side-main-box hide-side'}>
                 <div className='side-main-box-inside'>
                     <div className='side-nav-logos'>
                         <div className='side-logo2'>
                             DARKMODE <SunIcon className='darkmoon' />
                         </div>
-                        
+
                         <div className='side-logo1'>
-                            <XCircleIcon className='xmark' onClick={()=>{setClicked(!clicked)}}/>
+                            <XCircleIcon className='xmark' onClick={() => { setClicked(!clicked) }} />
                         </div>
                     </div>
                     <div className='side-content'>
@@ -101,9 +100,6 @@ const Navbar = () => {
                             {litem2}
                         </ul>
                     </div>
-
-
-
                 </div>
             </div>
         </>
